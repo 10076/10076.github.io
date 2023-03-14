@@ -6,28 +6,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Github Pages</title>
 		<link rel="stylesheet" href="/index.css" />
-		<script type="module" crossorigin src="/index.js"></script>
 	</head>
 	<body>
 		<div id="app">
 			<div class="box">
-				<p class="poetry title">淮上与友人别</p>
+				<p class="poetry title" id="poetry-title">淮上与友人别</p>
 				<br />
-				<p class="poetry author">唐·郑谷</p>
+				<p class="poetry author" id="poetry-dynasty-author">唐代 · 郑谷</p>
 				<br />
-				<p>
-					扬子江头杨柳春，
-				</p><br>
-				<p>
-					杨花愁杀渡江人。
-				</p><br>
-				<p>
-					数声风笛离亭晚，
-				</p><br>
-				<p>
-					君向潇湘我向秦。
-				</p><br>
+				<div id="poetry-content">
+					<p>扬子江头杨柳春，</p>
+					<br />
+					<p>杨花愁杀渡江人。</p>
+					<br />
+					<p>数声风笛离亭晚，</p>
+					<br />
+					<p>君向潇湘我向秦。</p>
+				</div>
+				<button id="reload-button">换一首</button>
 			</div>
 		</div>
+		<script type="module" crossorigin src="/index.js"></script>
 	</body>
 </html>

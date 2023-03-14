@@ -16,6 +16,19 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #eee;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -76,15 +89,26 @@ p {
 	margin: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #eee;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
+button {
+	border-radius: 8px;
+	border: 2px solid transparent;
+	border-color: #213547;
+	color: #646cff;
+	background-color: transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	cursor: pointer;
+	transition: border-color 0.25s;
+	text-align: center;
+	flex: 0 1;
+	margin: 1vw;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
 }
