@@ -34,12 +34,29 @@ button.addEventListener("click", function () {
 			}
 			if (authorElement) {
 				authorElement.innerText =
-					data.data.origin.dynasty + " : " + data.data.origin.author;
+					data.data.origin.dynasty + " · " + data.data.origin.author;
 			}
 			var contentElement = document.getElementById("poetry-content");
 			if (contentElement) {
 				var texts = data.data.origin.content;
-				contentElement.innerHTML = texts.join("<br>");
+				var htmlList = [];
+				// 遍历文本列表
+				for (var i = 0; i < texts.length; i++) {
+					// 获取当前句子
+					var sentence = texts[i];
+					// 生成 HTML 代码
+					var html = "<p>" + sentence + "</p>";
+					if (i < texts.length - 1) {
+						// 如果不是，添加 <br> 标签
+						html += "<br>";
+					}
+					// 添加到数组中
+					htmlList.push(html);
+				}
+				// 连接数组元素
+				var htmlString = htmlList.join("");
+				// 获取目标元素
+				contentElement.innerHTML = htmlString;
 			}
 		});
 	};

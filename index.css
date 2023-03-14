@@ -53,23 +53,17 @@ body {
 }
 
 #box {
-	text-align: center;
-	align-items: center;
-	margin: auto;
-}
-
-.box {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	flex: 1;
-
-	/* justify-content: space-around; */
-
-	background-color: var(--bgColor);
+	text-align: center;
+	align-items: center;
+	margin: auto;
 }
+
 .poetry {
 }
 .poetry.title {
@@ -86,7 +80,6 @@ p {
 	text-align: center;
 	max-width: 100%;
 	line-height: 100%;
-	margin: 10px;
 }
 
 button {
